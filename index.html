@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Propostas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="formulario">
+      <h2>Proposta de Serviços</h2>
+
+      <div class="secao">
+        <h3>Tipo de Serviço</h3>
+        <label>
+          <input type="radio" name="tipoServico" value=".link" checked /> .link
+          (Vendas de Pacote de Internet)
+        </label>
+        <label>
+          <input type="radio" name="tipoServico" value=".data" /> .data (Banco
+          de Dados)
+        </label>
+      </div>
+
+      <div class="secao">
+        <h3>Plano Oferecido</h3>
+        <select name="plano">
+          <option value="plano1">Plano 1</option>
+          <option value="plano2">Plano 2</option>
+          <option value="plano3">Plano 3</option>
+          <!-- Adicione mais opções de plano conforme necessário -->
+        </select>
+      </div>
+
+      <div class="secao">
+        <h3>Informações da Empresa</h3>
+        <label>
+          Nome da Empresa: <input type="text" name="nomeEmpresa" />
+        </label>
+        <label> CNPJ: <input type="text" name="cnpj" /> </label>
+        <label> Endereço: <input type="text" name="endereco" /> </label>
+      </div>
+
+      <div class="secao">
+        <h3>Serviço</h3>
+        <label>
+          Opções de Serviço:<br />
+          <textarea name="opcoesServico" rows="4" cols="50"></textarea>
+        </label>
+      </div>
+
+      <div class="secao">
+        <h3>Objetivo</h3>
+        <label>
+          Objetivo do Serviço:<br />
+          <textarea name="objetivo" rows="4" cols="50"></textarea>
+        </label>
+      </div>
+
+      <div class="secao">
+        <h3>Situação Atual</h3>
+        <label>
+          Pontos Observados:<br />
+          <textarea name="situacaoAtual" rows="4" cols="50"></textarea>
+        </label>
+      </div>
+
+      <div class="secao">
+        <h3>Anexar Fotos</h3>
+        <div class="foto-container">
+          <div class="foto-input">
+            <label>
+              Anexar Foto 1:<br />
+              <input type="file" class="foto-input-field" accept="image/*" />
+              Título da Foto 1: <input type="text" class="titulo-foto-input" />
+              <button class="enviar-foto">Enviar Foto</button>
+            </label>
+            <div class="foto-preview">
+              <img class="foto-preview-img" src="#" alt="Foto 1" />
+            </div>
+          </div>
+          <!-- Repita para Foto 2, 3 e 4 -->
+        </div>
+        <button class="adicionar-foto">Adicionar Mais Fotos</button>
+      </div>
+
+      <div class="secao">
+        <h3>Fornecimento de Materiais e Serviços</h3>
+        <label>
+          Fornecimento de Materiais e Serviços:<br />
+          <textarea name="fornecimento" rows="4" cols="50"></textarea>
+        </label>
+        <button class="salvar">Salvar</button>
+      </div>
+
+      <div class="botoes">
+        <button class="enviar">Enviar</button>
+        <button class="editar">Editar Informações</button>
+        <button class="exportar">Exportar</button>
+      </div>
+    </div>
+    <script src="/Biblioteca-Htm12pdf/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
